@@ -3,8 +3,10 @@
 package gopus
 
 // #cgo linux darwin LDFLAGS: -lm
+// #cgo freebsd LDFLAGS: -L/usr/local/lib -lm
 //
-// #cgo CFLAGS: -Iopus-1.1.2/include -Iopus-1.1.2/celt -Iopus-1.1.2/silk -Iopus-1.1.2/silk/float -Iopus-1.1.2/silk/fixed
+// #cgo linux darwin CFLAGS: -Iopus-1.1.2/include -Iopus-1.1.2/celt -Iopus-1.1.2/silk -Iopus-1.1.2/silk/float -Iopus-1.1.2/silk/fixed
+// #cgo freebsd CFLAGS: -I/usr/local/include -Iopus-1.1.2/include -Iopus-1.1.2/celt -Iopus-1.1.2/silk -Iopus-1.1.2/silk/float -Iopus-1.1.2/silk/fixed
 //
 // #include "opus-1.1.2/config.h"
 //
